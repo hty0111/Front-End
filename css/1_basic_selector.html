@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>basic selector</title>
+
+    <!-- 标签选择器 -->
+    <style>
+        p{
+            color: black;
+            background: wheat;
+            border-radius: 10ex;
+        }
+    </style>
+
+    <!-- 类选择器，可复用 -->
+    <style>
+        .title1{
+            color: red;
+        }
+        .title2{
+            color: green;
+        }
+        .title3{
+            color: blue;
+        }
+    </style>
+
+    <!-- id选择器，全局唯一 -->
+    <style>
+        #sub_title1{
+            color: yellow;
+        }
+    </style>
+
+</head>
+<body>
+
+<!-- 优先级：id > class > label -->
+
+<h1 class="title1">标题1</h1>
+<h1 class="title2">标题2</h1>
+<h1 class="title3">标题3</h1>
+
+<h2 id="sub_title1">小标题1</h2>
+
+<p>内容</p>
+
+</body>
+</html>

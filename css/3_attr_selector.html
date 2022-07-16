@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>attribute selector</title>
+
+    <style>
+        .demo a{
+            float: left;
+            display: block;
+            height: 50px;
+            width: 50px;
+            border-radius: 10px;
+            background: grey;
+            text-align: center;
+            text-decoration: none;
+            color: gainsboro;
+            margin-right: 5px;
+            font: bold 20px/50px Arial;
+        }
+
+        /* 属性选择器
+        属性=[属性值]，正则表达式
+        */
+        a[id=first]{
+            background: yellow;
+        }
+        a[href$=svg]{
+            background: blue;
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+<p class="demo">
+    <a href="https://www.baidu.com" class="links item first" id="first">1</a>
+    <a href="https://www.google.com" class="links item active" target="_blank" title="test" id="second">2</a>
+    <a href="../resources/images/1.svg" class="links item">3</a>
+    <a href="../resources/images/1.png" class="links item">4</a>
+
+</p>
+
+</body>
+</html>
