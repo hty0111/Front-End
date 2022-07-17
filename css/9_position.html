@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position</title>
+
+    <style>
+        body{
+            height: 2000px;
+        }
+
+        .box{
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            border: 2px solid red;
+        }
+        a{
+            width: 100px;
+            height: 100px;
+            text-decoration: none;
+            background: pink;
+            line-height: 100px;
+            text-align: center;
+            color: black;
+            display: block;
+        }
+        a:hover{
+            background: dodgerblue;
+        }
+        .a2, .a4{
+            position: relative;
+            left: 200px;
+            top: -100px;
+        }
+        .a5{
+            position: relative;
+            left: 100px;
+            top: -300px;
+        }
+
+        div:nth-of-type(2){
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            right: 0;
+            bottom: 100px;
+            color: white;
+        }
+        div:nth-of-type(3){
+            width: 100px;
+            height: 100px;
+            background: blue;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="box">
+    <a href="1_basic_selector.html" class="a1">链接1</a>
+    <a href="2_layer_selector.html" class="a2">链接2</a>
+    <a href="3_attr_selector.html" class="a3">链接3</a>
+    <a href="4_font.html" class="a4">链接4</a>
+    <a href="5_text.html" class="a5">链接5</a>
+</div>
+
+<div>绝对定位</div>
+<div>固定定位</div>
+
+</body>
+</html>

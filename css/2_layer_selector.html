@@ -4,40 +4,33 @@
     <meta charset="UTF-8">
     <title>layer selector</title>
 
-    <!-- 后代选择器 -->
+
     <style>
+        /* 后代选择器，选中第一个标签下的所有第二个标签  */
         body p{
             color: blue;
         }
-    </style>
 
-    <!-- 子选择器 -->
-    <style>
+        /* 子选择器，两个标签必须是上下级关系 */
         body > p{
             background: yellow;
         }
-    </style>
 
-    <!-- 相邻兄弟选择器，向后选择一个 -->
-    <style>
+        /* 相邻兄弟选择器，选择与前一项同级的后一个的后一项标签 */
         .active + p{
             border-radius: 50ex;
         }
-    </style>
 
-    <!-- 通用兄弟选择器，向后选择所有 -->
-    <style>
+        /* 通用兄弟选择器，选择与前一项同级的后面所有的后一项标签 */
         .active ~ p{
             width: 50ex;
         }
-    </style>
 
-    <!-- 伪类选择器 -->
-    <style>
+        /* 伪类选择器，从父类下开始寻找（同级） */
         ul li:first-child{
             background: green;
         }
-        ul li:last-child{
+        ul li:nth-of-type(2){
             background: brown;
         }
     </style>

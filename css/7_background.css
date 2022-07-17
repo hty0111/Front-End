@@ -1,0 +1,35 @@
+.title1{
+    font-size: 18px;
+    font-weight: bold;
+    text-indent: 1em;
+    line-height: 35px;
+    background: red url("../resources/images/down_arrow.png") no-repeat 270px 10px;
+    background-size: 10%;
+}
+
+#nav{
+    width: 300px;
+}
+
+ul{
+    background: grey;
+}
+
+ul li{
+    height: 30px;
+    list-style: circle;
+    text-indent: 1em;
+    background-image: url("../resources/images/right_arrow.png");
+    background-position: 240px, 10px;
+    background-repeat: no-repeat;
+    background-size: 8%;
+}
+
+ul li a{
+    text-decoration: none;
+}
+
+ul li a:hover{
+    color: orange;
+    text-decoration: underline;
+}

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>attribute selector</title>
+    <title>test</title>
 
     <style>
         .demo a{
@@ -19,29 +19,65 @@
             font: bold 20px/50px Arial;
         }
 
-        /* 属性选择器
-        属性=[属性值]，正则表达式
-        */
-        a[id=first]{
-            background: yellow;
+        /*.main{*/
+        /*    background: green;*/
+        /*}*/
+        /*.part1{*/
+        /*    background: blue;*/
+        /*}*/
+        /*.part2{*/
+        /*    background: red;*/
+        /*}*/
+        /*.first + p{*/
+        /*    background: red;*/
+        /*}*/
+        /*.first ~ p{*/
+        /*    background: red;*/
+        /*}*/
+        /*.part1:first-child{*/
+        /*    background: red;*/
+        /*}*/
+        a[class*=web]{
+            background: red;
         }
-        a[href$=svg]{
-            background: blue;
-        }
-
     </style>
-
 
 </head>
 <body>
 
-<p class="demo">
-    <a href="https://www.baidu.com" class="links item first" id="first">1</a>
-    <a href="https://www.google.com" class="links item active" target="_blank" title="test" id="second">2</a>
-    <a href="../resources/images/1.svg" class="links item">3</a>
-    <a href="../resources/images/1.png" class="links item">4</a>
+<div class="selector">
+    <div class="title">
+        <h2>选择器练习</h2>
+    </div>
+    <div class="main">
+        <div class="part1">
+            <p class="first">1.1</p>
+            <p class="second">1.2</p>
+            <p class="third">1.3</p>
+        </div>
+        <div class="part2">
+            <ul>
+                <li>
+                    <p class="first">2.1</p>
+                </li>
+                <li>
+                    <p class="second">2.2</p>
+                </li>
+                <li>
+                    <p class="third">2.3</p>
+                </li>
+            </ul>
+        </div>
+        <div class="part3">
+            <p class="first"><a href="https://www.baidu.com" class="links web" id="first_link">3.1</a></p>
+            <p><a href="https://www.google.com" class="links web" target="_blank" id="second_link">3.2</a></p>
+            <p><a href="../resources/images/1.svg" class="links image">3.3</a></p>
+        </div>
+    </div>
+</div>
 
-</p>
+
+
 
 </body>
 </html>
