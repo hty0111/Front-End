@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class</title>
+</head>
+<body>
+
+<script>
+    // 原型链的概念：类最终指向object对象，然后自我循环
+
+    class Student{
+        constructor(name) {
+            this.name = name;
+        }
+        hello(){
+            alert(`name: ${this.name}`);   // 要加this指针
+        }
+    }
+
+    let hty = new Student("HTY");
+    hty.hello();
+
+    class Pupil extends Student{
+        constructor(props, grade) {
+            super(props);
+            this.grade = grade;
+        }
+        hello() {
+            super.hello();
+            alert(`grade: ${this.grade}`);
+        }
+    }
+
+    let zxa = new Pupil("ZXA", 5);
+    zxa.hello();
+
+</script>
+
+</body>
+</html>

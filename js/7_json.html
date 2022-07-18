@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>json</title>
+</head>
+<body>
+
+<script>
+      let user = {
+          name: "HTY",
+          age: 21,
+          sex: "male"
+      };
+      let json_user = JSON.stringify(user, null, ' ');
+      console.log(json_user);
+      let js_user = JSON.parse(json_user);
+      console.log(json_user);
+</script>
+
+
+</body>
+</html>

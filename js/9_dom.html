@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+
+<div class="list" id="list">
+    <p id="id1">
+        DOM
+    </p>
+</div>
+
+
+<script>
+    // 更新节点
+    let id1 = document.getElementById("id1");
+    console.log(id1);
+    id1.id = "js";
+    id1.innerText = "js";
+    id1.innerHTML = "<strong>JavaScript</strong>";
+    id1.style.color = "red";
+    id1.style.fontSize = "20px";
+
+    // 创建节点
+    let java = document.createElement('p');
+    java.id = 'java';
+    java.innerText = 'Java';
+
+    // 追加节点
+    document.getElementsByClassName('list')[0].append(java);    // 无返回值
+    // 或者
+    // let list = document.getElementsByClassName('list')[0];
+    // list.append(java);
+
+    // 追加到目标位置前面
+    let python = document.createElement('p');
+    python.id = 'python';
+    python.innerText = 'python';
+    document.getElementById('list').insertBefore(python, java);
+
+    // 删除节点
+    let self = document.getElementById('js');
+    let parent = self.parentElement.removeChild(self);
+
+</script>
+
+</body>
+</html>

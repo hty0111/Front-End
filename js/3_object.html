@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>object</title>
+
+    <script>
+        // 可动态删减属性
+        let person = {
+            name: "HTY",
+            age: 21,
+            sex: "",
+        };
+        person.sex = "male";    // 类引用
+        person['age'] = 22;     // 字典引用
+        delete person.sex;      // 删除属性
+        person.score = 4.5;     // 添加属性
+        // 判断属性值是否在对象中（可继承）
+        console.log('age' in person);       // true
+        console.log('toString' in person);  // true
+        // 判断属性是否是对象自身拥有的（不可继承）
+        console.log(person.hasOwnProperty('age'));      // true
+        console.log(person.hasOwnProperty('toString')); // false
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

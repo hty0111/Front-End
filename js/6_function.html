@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function</title>
+
+    <script>
+        // 定义方法1
+        function abs(x)
+        {
+            if (typeof x !== "number")
+                console.log("Not a number!");
+                // throw "Not a number";
+            if (x >= 0)
+                return x;
+            else
+                return -x;
+        }
+        // 定义方法2
+        let sgn = function (x, ...rest)
+        {
+            // arguments为所有传入参数的数组
+            for (let i of arguments)
+                console.log("arguments:", i);
+            // rest为除了定义形参外的剩下参数的数组
+            for (let i of rest)
+                console.log("rest:", i);
+            if (x > 0)
+                return 1;
+            if (x < 0)
+                return -1;
+            else
+                return 0;
+        }
+
+        console.log(abs(-10));
+        console.log(sgn(-5, 5, 0));
+        console.log(abs('a'));
+
+        function getAge()
+        {
+            let now = new Date().getFullYear();
+            return now - this.birth;
+        }
+
+        let person = {
+            name: "HTY",
+            birth: 2001,
+            age1: function ()
+            {
+                let now = new Date().getFullYear();
+                return now - this.birth;
+            },
+            age2: getAge
+        };
+
+        console.log(person.age1());
+        console.log(getAge.apply(person, []));  // 使用apply改变this指针的指向
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

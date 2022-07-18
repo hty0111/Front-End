@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array</title>
+
+    <script>
+        // 数组内容和长度都可变，类型可不一致
+        let arr = [0, 1, 2, 3, 4, 5];
+        arr.length; // 6
+        arr[0] = 6;
+        arr.length = 10;    // 长度不足补充empty
+        arr.length = 4;     // [6, 1, 2, 3]
+        arr.slice(0, 1);    // 切片不改变自身
+        arr.pop();
+        arr.push(4);
+        arr.shift();        // 弹出头部
+        arr.unshift(0);
+        arr.sort();
+        arr.reverse();
+        arr.concat(['A', 'B', 'C']);    // 拼接不改变自身
+        arr.join("");
+
+        // 打印下标
+        for (let index in arr)
+        {
+            console.log(index);
+        }
+        // 打印元素
+        arr.forEach(
+            function (index){
+                console.log(index);
+            }
+        )
+        for (let item of arr)
+        {
+            console.log(item);
+        }
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
